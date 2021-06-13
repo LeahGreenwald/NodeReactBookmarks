@@ -31,10 +31,6 @@ const update = async (id, title) => {
 
 const top5 = async () => {
    return await knex.from('bookmarks').select({url: 'url'}).count({count: 'url'}).groupBy('url').orderBy('count', 'desc').limit(5);
-
-    // return await knex.from('bookmarks').select({url: 'bookmarks.url'})
-    // .count({ count: 'bookmarks.url' }).groupBy('bookmarks.url')
-    // .orderBy('count', 'desc').limit(5);
 }
 
 module.exports = {
