@@ -11,7 +11,7 @@ const Home = () => {
             setTopUrl(data);
         };
         getTopUrl();
-    })
+    }, [])
 
     const row = (u) => {
         return (

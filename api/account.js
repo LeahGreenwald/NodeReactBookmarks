@@ -23,7 +23,7 @@ router.get('/getcurrentuser', (req, res) => {
     res.json(req.user);
 });
 
-router.get('/logout', (req, res) => {
+router.post('/logout', (req, res) => {
     req.logout();
     res.json({ status: 'ok' });
 })
